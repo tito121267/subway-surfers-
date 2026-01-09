@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Runner Ultimate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="menu" class="screen">
+  <h1>RUNNER ULTIMATE</h1>
+  <button onclick="Game.start()">START</button>
+  <button onclick="UI.openShop()">SHOP</button>
+</div>
+
+<div id="shop" class="screen hidden">
+  <h2>SHOP</h2>
+  <p>Coins: <span id="shopCoins">0</span></p>
+  <button onclick="Shop.buySkin('blue')">Blue Skin (500)</button>
+  <button onclick="Shop.buySkin('red')">Red Skin (500)</button>
+  <button onclick="UI.backToMenu()">BACK</button>
+</div>
+
+<div id="gameover" class="screen hidden">
+  <h2>GAME OVER</h2>
+  <p id="finalScore"></p>
+  <button onclick="location.reload()">RESTART</button>
+</div>
+
+<div id="hud">
+  Score: <span id="score">0</span><br>
+  Coins: <span id="coins">0</span><br>
+  Power: <span id="power">None</span>
+</div>
+
+<canvas id="game"></canvas>
+
+<script src="game.js"></script>
+</body>
+</html>
